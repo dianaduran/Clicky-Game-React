@@ -1,0 +1,19 @@
+{
+  "name": "clicky-game-react",
+  "version": "1.0.0",
+  "scripts": {
+    "client": "cd client && yarn start",
+    "server": "nodemon server.js",
+    "start": "concurrently \"nodemon server.js\" \"npm run client\""
+  },
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dianaduran/Clicky-Game-React.git"
+  }
+}
