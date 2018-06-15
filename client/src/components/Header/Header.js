@@ -1,7 +1,7 @@
 import React from "react";
 import "./header.css";
 
-import { Col, Row, Container } from "../../components/Grid";
+import { Container } from "../../components/Grid";
 
 const Header = () => (
     <div className="header">
