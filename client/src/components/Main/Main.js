@@ -20,18 +20,18 @@ import { Container } from "../../components/Grid";
 
 class Main extends Component {
 
-  state = {
-    dogs
+  state={
+     count:0
   };
 
-  // shuffledDogs=()=>{
+  clickImg=(id)=>{
+    this.setState({ count: this.state.count + 1 });
+  };
 
-  //   return shuffleArray(dogs);
-   
-  // };
+  
  
   render() {
-    let shuffledDogs = shuffleArray(this.state.dogs);
+   let shuffledDogs = shuffleArray(dogs);
   
     return (
    <Container>
@@ -40,6 +40,7 @@ class Main extends Component {
             id={dog.id}
             key={dog.id}
             url={dog.url}
+            clickImg={this.clickImg}
            />
         ))}
     </Container>  
