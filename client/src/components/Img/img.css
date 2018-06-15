@@ -11,3 +11,11 @@
 div {
     display: block;
 }
+
+img:hover{
+    opacity: 0.3;
+    -moz-box-shadow: 0 0 10px #ccc;
+    -webkit-box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 10px #ccc;
+    cursor: -webkit-grab;
+}
