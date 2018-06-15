@@ -15,8 +15,7 @@ class Main extends Component {
     return (
     <Container>
     {this.state.dogs.map(dog => (
-      //console.log(dog)
-          <Img
+        <Img
             id={dog.id}
             key={dog.id}
             url={dog.url}
