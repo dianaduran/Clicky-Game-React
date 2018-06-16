@@ -2,7 +2,7 @@ import React from "react";
 import "./nav.css";
 import Counter from "../Counter";
 
-const Nav = () => (
+const Nav = (props) => (
   <nav className="nav nav-pills nav-fill navbar">
    <li className="nav-item">
     <a className="nav-link title" href="/">Clicky Game</a>
@@ -11,9 +11,9 @@ const Nav = () => (
     Click an image to begin!
   </li>
   <li className="nav-item">
-   <Counter />
+   <Counter  />
   </li>
-  </nav>
+   </nav>
 );
 
 export default Nav;
