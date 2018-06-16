@@ -26,9 +26,11 @@ class Main extends Component {
      count:0,
   };
 
-  clickImgID=id=>{    
+  clickImgID=id=>{  
+   // console.log("id  clicked: "+id)  
     if(clicked.indexOf(id)<0){
       this.setState({ count: this.state.count + 1  })
+      console.log("score main: "+ this.state.count)
       clicked.push(id);
     }
     else

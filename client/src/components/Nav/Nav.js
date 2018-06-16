@@ -11,7 +11,7 @@ const Nav = (props) => (
     Click an image to begin!
   </li>
   <li className="nav-item">
-  <p>Score : {props.count} | Top Score : {props.topScore}</p>
+     Score : {props.count} | Top Score : {props.topScore}
   </li>
    </nav>
 );
