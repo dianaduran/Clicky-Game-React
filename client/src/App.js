@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Nav from "./components/Nav";
 import Header from "./components/Header";
-//import Main from "./components/Main";
 import Img from "./components/Img";
 import dogs from "./dogs.json";
 import { Container } from "./components/Grid";
@@ -20,40 +19,40 @@ function shuffleArray (array) {
 
 let clicked=[];
 let TopScore=0;
+let text="Click an image to begin!";
 
 class App extends Component {
 
   state={
     count:0,
-    topScore:0
+    dogs:dogs
   };
 
-  
-
-   clickImgID=id=>{  
+  clickImgID=id=>{  
       if(clicked.indexOf(id)<0){
          clicked.push(id);
          this.setState({ count: this.state.count + 1 });
-        this.setState({ topScore: this.state.topScore + 1 });
-     }
+         this.setState({dogs: shuffleArray(dogs)})
+         text="You guessed correctly!";
+      }
      else
      {
       clicked=[];
-       console.log("estaba: "+clicked);
-       this.setState({ count: 0 });
+      this.setState({ count: 0 });
+      this.setState({dogs: shuffleArray(dogs)});
        TopScore+=1;
+       text="You guessed incorrectly!";
      }
  }
  
   render() {
-    let shuffledDogs = shuffleArray(dogs);
-    return (
+     return (
     <div>
-      <Nav count={this.state.count} topScore={TopScore}/>
+      <Nav count={this.state.count} topScore={TopScore} text={text}/>
       <Header />
       <Container>
         <div>
-        {shuffledDogs.map((dog, key) => (
+        {this.state.dogs.map((dog, key) => (
           <Img
               id={dog.id}
               key={dog.id}
