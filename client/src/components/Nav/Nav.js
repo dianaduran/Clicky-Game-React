@@ -1,6 +1,6 @@
 import React from "react";
 import "./nav.css";
-import Counter from "../Counter";
+// import Counter from "../Counter";
 
 const Nav = (props) => (
   <nav className="nav nav-pills nav-fill navbar">
@@ -11,7 +11,7 @@ const Nav = (props) => (
     Click an image to begin!
   </li>
   <li className="nav-item">
-   <Counter  />
+  <p>Score : {props.count} | Top Score : {props.topScore}</p>
   </li>
    </nav>
 );
